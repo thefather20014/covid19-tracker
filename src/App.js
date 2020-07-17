@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react'
+import { Cards, Chart, CounterPicker } from './components/components';
 import './App.css';
+import { CustomGetApi } from './hooks/GetApiHook';
+import { Typography} from '@material-ui/core';
+import image from './Images/image.png'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    const [search, setSearch] = useState('Global');
+    const { data, loading } = CustomGetApi(search);
+
+    return (
+        <div className="container">
+
+            { loading ? null: <Typography variant="h2"> Loading.. </Typography> }
+
+            <img src={ image } alt="covid-19"/>
+            <Cards data={ data } />
+            <CounterPicker search={ search } setSearch={ setSearch }/>
+            <Chart data={ data } country={ search }/>
+
+        </div>
+    )
 }
 
-export default App;
+export default App
