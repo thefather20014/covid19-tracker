@@ -23,7 +23,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <div className={styles.container}>
             <Grid container spacing={5} justify="center">
 
-                <Grid item xs={ 12 } md={ 3 } className={ cx(styles.infected, styles.card) } component={Card}>
+                <Grid item xs={ 12 } md={ 3 } className={ cx(styles.infected, styles.card, 'animate__animated animate__fadeIn animate') } component={Card}>
                     <Typography className={classes.root} gutterBottom>Infected</Typography>
                     <Typography variant="h5">
                         <CountUp
@@ -37,7 +37,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                     <Typography variant="body2">Number of active cases of COVID-19</Typography>
                 </Grid>
 
-                <Grid item component={Card} xs={ 12 } md={ 3 } className={ cx(styles.recovered, styles.card) }>
+                <Grid item component={Card} xs={ 12 } md={ 3 } className={ cx(styles.recovered, styles.card, 'animate__animated animate__fadeIn animate') }>
                     <Typography className={classes.root} gutterBottom>Recovered</Typography>
                     <Typography variant="h5">
                         <CountUp
@@ -51,7 +51,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                     <Typography variant="body2">Number of recoveries from COVID-19</Typography>
                 </Grid>
 
-                <Grid item component={Card} xs={ 12 } md={ 3 } className={ cx(styles.deaths, styles.card) }>
+                <Grid item component={Card} xs={ 12 } md={ 3 } className={ cx(styles.deaths, styles.card, 'animate__animated animate__fadeIn animate') }>
                     <Typography className={classes.root} gutterBottom>Deaths</Typography>
                     <Typography variant="h5">
                         <CountUp

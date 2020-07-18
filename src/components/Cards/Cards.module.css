@@ -4,6 +4,13 @@
 
 .card {
     margin: 2% 4% !important;
+    transition: all 1s ease !important;
+}
+
+.card:hover {
+    transform: translateY(-1px) scale(1.1) !important;
+    transition: all 1s ease !important;
+    cursor: pointer;
 }
 
 .infected {

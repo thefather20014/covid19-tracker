@@ -2,6 +2,7 @@ import React from 'react';
 import { Select, FormControl, MenuItem } from '@material-ui/core';
 import Styles from './CounterPicker.module.css';
 import { GetCountriesData } from '../../hooks/GetApiHook';
+import cx from 'classnames';
 
 const CounterPicker = ({ search, setSearch }) => {
 
@@ -10,7 +11,7 @@ const CounterPicker = ({ search, setSearch }) => {
     const handleSearch = e => setSearch(e.target.value);;
     return (
         <div>
-            <FormControl className={Styles.formControl}>
+            <FormControl className={cx(Styles.formControl, 'animate__animated animate__fadeIn animate__delay-1s')}>
                 <Select
                     labelId="demo-mutiple-name-label"
                     id="demo-mutiple-name"
