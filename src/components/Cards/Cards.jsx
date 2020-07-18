@@ -34,7 +34,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                         />
                     </Typography>
                     <Typography className={classes.root}> {new Date(lastUpdate).toDateString()} </Typography>
-                    <Typography variant="body2">Number of active cases of COVID-19</Typography>
+                    <Typography variant="body2">Number of infected of COVID-19</Typography>
                 </Grid>
 
                 <Grid item component={Card} xs={ 12 } md={ 3 } className={ cx(styles.recovered, styles.card, 'animate__animated animate__fadeIn animate') }>
